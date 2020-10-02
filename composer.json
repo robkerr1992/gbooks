@@ -19,6 +19,7 @@
     ],
     "require": {
         "php": "^7.4",
+        "google/apiclient": "^2.7",
         "illuminate/contracts": "^8.0"
     },
     "require-dev": {
@@ -29,7 +30,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Rksugarfree\\Gbooks\\": "src",
+            "Rksugarfree\\Gbooks\\": "src"
         }
     },
     "autoload-dev": {
