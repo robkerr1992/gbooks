@@ -10,6 +10,11 @@ trait SearchTerms
 {
     private array $queryParams = [];
 
+    public function reset(): void
+    {
+        $this->queryParams = [];
+    }
+
     public function search(string $searchTerm): void
     {
         $this->queryParams['q'] = $searchTerm;
