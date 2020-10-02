@@ -13,12 +13,16 @@ class GbooksServiceProvider extends ServiceProvider
                 __DIR__ . '/../config/gbooks.php' => config_path('gbooks.php'),
             ], 'config');
         }
-
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'gbooks');
     }
 
     public function register()
     {
+        $this->app->bind('google-books', function ($app) {
+            return new Gbooks(
+                new \Google_Service_Books(new \Google_Client($app['config']['gbooks']))
+            );
+        });
+
         $this->mergeConfigFrom(__DIR__ . '/../config/gbooks.php', 'gbooks');
     }
 }
