@@ -3,7 +3,6 @@
 
 namespace Rksugarfree\Gbooks;
 
-
 use Rksugarfree\Gbooks\Exceptions\InvalidQueryParameter;
 
 trait QueryOptions
