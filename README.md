@@ -32,7 +32,7 @@ By Volume Id
 $book = Rksugarfree\Gbooks::byVolumeId($volumeId);
 ```
 
-Similiar results by Volume Id
+Similar results by Volume Id
 ``` php
 $similarBooks = Rksugarfree\Gbooks::similar($volumeId);
 ```
