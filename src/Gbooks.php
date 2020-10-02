@@ -6,6 +6,5 @@ class Gbooks
 {
     public function __construct()
     {
-
     }
 }
