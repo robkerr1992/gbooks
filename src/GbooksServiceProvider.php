@@ -17,7 +17,7 @@ class GbooksServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->app->bind('google-books', function ($app) {
+        $this->app->singleton('gbooks', function ($app) {
             return new Gbooks(
                 new \Google_Service_Books(new \Google_Client($app['config']['gbooks']))
             );
