@@ -21,18 +21,49 @@ This is the contents of the published config file:
 
 ```php
 return [
-
+    'developer_key' => 'your google api key'
 ];
 ```
 
 ## Usage
 
+By Volume Id
 ``` php
-$gbooks = new Rksugarfree\Gbooks();
-echo $gbooks->echoPhrase('Hello, Rksugarfree!');
+$book = Rksugarfree\Gbooks::byVolumeId($volumeId);
 ```
 
-## Testing
+Similiar results by Volume Id
+``` php
+$similarBooks = Rksugarfree\Gbooks::similar($volumeId);
+```
+
+Simple search
+``` php
+$filteredBooks = Rksugarfree\Gbooks::search('Dan Brown')->get();
+```
+
+With more advanced filters
+``` php
+$filteredBooks = Rksugarfree\Gbooks::search('Dan Brown')->printType('books')->limit(5)->downloadable()->get();
+```
+
+Use any chain of filters you like, ending the method chain with ->get() will execute the query.
+
+
+## Available Filters
+
+* reset(): Resets all filters.
+* search($searchTerm): Searches by the given string.
+* limit($int): Maximum number of results. Must be between 0 and 40.
+* orderBy($orderTerm): Order results by 'newest' or 'relevance'.
+* downloadable(): Only results that can be downloaded.
+* bookType(): Filter by 'ebooks', 'free-books', 'full', 'paid-ebooks' or 'partial'.
+* printType(): Filter by 'all', 'books' or 'magazines'.
+* showPreorders(): Include results that are only preorders.
+* info(): Whether each book's info should be the 'full' or 'lite' version.
+* startIndex(): Which index the results returned should start at.
+
+## Testing (Not completed)
 
 ``` bash
 composer test
