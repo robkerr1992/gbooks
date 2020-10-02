@@ -55,7 +55,10 @@
             "aliases": {
                 "Gbooks": "Rksugarfree\\Gbooks\\GbooksFacade"
             }
-        }
+        },
+        "google/apiclient-services": [
+            "Books"
+        ]
     },
     "minimum-stability": "dev",
     "prefer-stable": true
