@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Skeleton\Tests;
+namespace Rksugarfree\Gbooks\Tests;
 
 class ExampleTest extends TestCase
 {

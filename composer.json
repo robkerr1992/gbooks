@@ -1,17 +1,19 @@
 {
-    "name": ":vendor_name/:package_name",
-    "description": ":package_description",
+    "name": "rksugarfree/gbooks",
+    "description": "Wrapper for Google Books API",
     "keywords": [
-        ":vendor_name",
-        ":package_name"
+        "rksugarfree",
+        "gbooks",
+        "google books api",
+        "laravel"
     ],
-    "homepage": "https://github.com/:vendor_name/:package_name",
+    "homepage": "https://github.com/rksugarfree/gbooks",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
-            "homepage": "https://spatie.be",
+            "name": "Robert Kerr",
+            "email": "rksugarfree@gmail.com",
+            "homepage": "http://robertkerr.me",
             "role": "Developer"
         }
     ],
@@ -27,13 +29,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Skeleton\\": "src",
-            "Spatie\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Rksugarfree\\Gbooks\\": "src",
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Tests\\": "tests"
+            "Rksugarfree\\Gbooks\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -48,10 +49,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\Skeleton\\SkeletonServiceProvider"
+                "Rksugarfree\\Gbooks\\GbooksServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "Spatie\\Skeleton\\SkeletonFacade"
+                "Gbooks": "Rksugarfree\\Gbooks\\GbooksFacade"
             }
         }
     },
