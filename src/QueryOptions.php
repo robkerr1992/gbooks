@@ -6,7 +6,7 @@ namespace Rksugarfree\Gbooks;
 
 use Rksugarfree\Gbooks\Exceptions\InvalidQueryParameter;
 
-trait SearchTerms
+trait QueryOptions
 {
     private array $queryParams = [];
 

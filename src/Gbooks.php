@@ -4,7 +4,7 @@ namespace Rksugarfree\Gbooks;
 
 class Gbooks
 {
-    use SearchTerms;
+    use QueryOptions;
 
     private \Google_Service_Books $googleServiceBooks;
 
