@@ -29,22 +29,22 @@ return [
 
 By Volume Id
 ``` php
-$book = Rksugarfree\Gbooks::byVolumeId($volumeId);
+$book = \Gbooks::byVolumeId($volumeId);
 ```
 
 Similar results by Volume Id
 ``` php
-$similarBooks = Rksugarfree\Gbooks::similar($volumeId);
+$similarBooks = \Gbooks::similar($volumeId);
 ```
 
 Simple search
 ``` php
-$filteredBooks = Rksugarfree\Gbooks::search('Dan Brown')->get();
+$filteredBooks = \Gbooks::search('Dan Brown')->get();
 ```
 
 With more advanced filters
 ``` php
-$filteredBooks = Rksugarfree\Gbooks::search('Dan Brown')->printType('books')->limit(5)->downloadable()->get();
+$filteredBooks = \Gbooks::search('Dan Brown')->printType('books')->limit(5)->downloadable()->get();
 ```
 
 Use any chain of filters you like, ending the method chain with ->get() will execute the query.
